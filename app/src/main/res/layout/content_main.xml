@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.lesjuz.doanddo.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/linear_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <EditText
+            style="@style/txtBoxStyle"
+            android:id="@+id/txt_Task"
+            android:layout_weight="0.7"
+            android:drawableLeft="@mipmap/list_checks"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:padding="10dp"
+            android:inputType="textCapSentences"
+            android:drawableStart="@mipmap/list_checks"
+            android:drawablePadding="10dp"
+            android:hint="@string/hint_name"
+            android:cursorVisible="true">
+
+
+        </EditText>
+        <View
+            android:id="@+id/view_between_txt_btn"
+            android:layout_height="match_parent"
+            android:layout_width="2dp"
+            android:background="@color/white"/>
+        <Button
+            android:text="@string/add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_add"
+            android:layout_weight="0.2"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list_todo"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_below="@id/linear_add"
+        android:dividerHeight="3dp"></ListView>
+</RelativeLayout>
